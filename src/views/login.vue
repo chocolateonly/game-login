@@ -134,7 +134,7 @@ tags.clearTags();
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: url(../assets/img/bg.gif);
+	background-image: url(../assets/img/bg2.gif);
 	background-size: 100% 100%;
 }
 
