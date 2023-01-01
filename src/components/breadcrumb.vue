@@ -1,15 +1,15 @@
 <template>
   <div class="mb-10" v-if="pathArr">
-  <el-breadcrumb separator="/">
-    <el-breadcrumb-item v-for="(p,index) in pathArr" :key="index">
-      <div style="display: flex;align-items: center">
-      <el-icon v-if="p.icon" style="margin-right: 5px;" size="16">
-        <component :is="p.icon"></component>
-      </el-icon>
-      <span>{{ p.title }}</span>
-      </div>
-    </el-breadcrumb-item>
-  </el-breadcrumb>
+<!--  <el-breadcrumb separator="/">-->
+<!--    <el-breadcrumb-item v-for="(p,index) in pathArr" :key="index">-->
+<!--      <div style="display: flex;align-items: center">-->
+<!--      <el-icon v-if="p.icon" style="margin-right: 5px;" size="16">-->
+<!--        <component :is="p.icon"></component>-->
+<!--      </el-icon>-->
+<!--      <span>{{ p.title }}</span>-->
+<!--      </div>-->
+<!--    </el-breadcrumb-item>-->
+<!--  </el-breadcrumb>-->
   </div>
 </template>
 
