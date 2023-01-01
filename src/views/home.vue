@@ -25,7 +25,6 @@ import vSidebar from '../components/sidebar.vue';
 import vTags from '../components/tags.vue';
 import { ref, provide, nextTick, onMounted } from 'vue';
 import { useIndex } from "../store";
-import Breadcrumb from "../components/breadcrumb.vue";
 const showrouter=ref(true)
 const reload=()=>{
   showrouter.value=false
