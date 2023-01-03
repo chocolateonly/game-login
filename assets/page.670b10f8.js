@@ -1,0 +1,1 @@
+import{a}from"./index.6b9f1d7a.js";const g=e=>{const o=a({keyword:"",page:1,page_size:20,total:0,list:[]});return{query:o,goPage:t=>{o.page=t,o.list=[],e(o)},goInit:()=>{o.page=1,o.total=0,o.list=[],e(o)}}};export{g as u};
