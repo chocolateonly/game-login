@@ -1,14 +1,15 @@
 <template>
 	<div class="login-wrap">
 
-    <!--        飘窗-->
-    <div class="piaochuang">
+		<div class="ms-login">
+
+      <!--        飘窗-->
+      <div class="piaochuang">
                 <span :class="submited?'piao':''">
                     {{param.username}}  {{param.password}}
                 </span>
-    </div>
+      </div>
 
-		<div class="ms-login">
 			<div class="ms-title">大哥号生成系统</div>
 			<el-form :model="param" :rules="rules" ref="login" class="ms-content" label-position="top">
 				<el-form-item prop="username" label="玩家昵称">
