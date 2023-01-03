@@ -171,7 +171,7 @@ tags.clearTags();
 	margin: -190px 0 0 -175px;
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.5);
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .ms-content {
