@@ -1,0 +1,1 @@
+import{B as o}from"./index.9941ee4c.js";const u=t=>{let e=document.createElement("input");document.body.appendChild(e),e.setAttribute("value",t),e.select(),document.execCommand("Copy"),o.success("\u590D\u5236\u6210\u529F"),e.remove()};export{u as c};
