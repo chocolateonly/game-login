@@ -1,5 +1,13 @@
 <template>
 	<div class="login-wrap">
+
+    <!--        飘窗-->
+    <div class="piaochuang">
+                <span :class="submited?'piao':''">
+                    {{param.username}}  {{param.password}}
+                </span>
+    </div>
+
 		<div class="ms-login">
 			<div class="ms-title">大哥号生成系统</div>
 			<el-form :model="param" :rules="rules" ref="login" class="ms-content" label-position="top">
@@ -52,6 +60,8 @@ interface LoginInfo {
 }
 const route = useRoute()
 const router = useRouter();
+const submited = ref(false)
+const timer = ref()
 const param = reactive<LoginInfo>({
 	username: route.query.username||'',
 	password: ''
@@ -68,6 +78,11 @@ const handleClose = () => {
 // 获取登录数据
 const getLoginData = (data: any) => {
   isLoding.value = false
+  if (submited.value) return
+  submited.value = true
+  timer.value = setTimeout(() => {
+    submited.value = false
+  }, 3500)
   localStorage.setItem('select_area',data.password)
   ElMessage({
     message: '报名成功！',
@@ -184,5 +199,40 @@ tags.clearTags();
 	bottom: 10px;
 	width: 100%;
 	color: #999999;
+}
+
+.piaochuang {
+  width: 100%;
+  height: 28px;
+  position: absolute;
+  /*background: #fcc;*/
+  left: 0%;
+  top: -40px;
+  overflow: hidden;
+}
+
+.piaochuang span {
+  /*background: #ccc;*/
+  width:100%;
+
+  position: absolute;
+  transform: translateX(110%);
+  color: red;
+  font-size: 20px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.piaochuang span.piao {
+  animation: piao 3s linear;
+}
+
+@keyframes piao {
+  0% {
+    transform: translateX(110%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
 }
 </style>
